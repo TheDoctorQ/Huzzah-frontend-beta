@@ -43,7 +43,7 @@ export default {
       {{ event.time }}
       <br />
       <a href="mapbox://"> {{ event.location }} </a><br />
-      <img v-for=" image in event.images" v-bind:src="image.url" style="max-width: 85%">
+      <img v-for=" image in event.images" v-bind:src="image.url" style="max-width: 100%">
       <br />
       <hr />
     </div>
@@ -58,8 +58,8 @@ body {
 }
 
 img {
-  width: 150px;
-  height: 200px;
+  width: 350px;
+  height: 400px;
 }
 
 /* css property */

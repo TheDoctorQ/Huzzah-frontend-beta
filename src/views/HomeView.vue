@@ -15,7 +15,7 @@ export default {
 };
 
 
-mapboxgl.accessToken = 'pk.eyJ1IjoidGhlZG9jdG9ycSIsImEiOiJjbDJ4dGIzaHAwMmd3M2RrZTQ4endlNmF4In0.IMYB7JtIW7g2yKnryg9d4A';
+mapboxgl.accessToken = process.env.VUE_APP_MAP_ACCESS_TOKEN;
 const bounds = [
   [-104.905, 39.2262], // Southwest coordinates
   [-104.895, 39.2311] // Northeast coordinates
@@ -1489,6 +1489,8 @@ map.on('load', () => {
 // // Add the geocoder to the map/
 // map.addControl(geocoder);
 
+// GeoLocation
+
 map.addControl(
   new mapboxgl.GeolocateControl({
     positionOptions: {
@@ -1522,7 +1524,6 @@ var directions = new MapboxDirections({
   }
 });
 
-// GeoLocation
 
 map.on('load', function () {
   if (navigator.geolocation) {
@@ -1538,12 +1539,12 @@ directions.on('route', function (e) {
 
 </script>
 
-<!-- <template>
+<template>
   <div class="home">
     <h1>{{ message1 }}</h1>
     <h2>{{ message2 }}</h2>
   </div>
-</template> -->
+</template>
 
 <style>
 #map {

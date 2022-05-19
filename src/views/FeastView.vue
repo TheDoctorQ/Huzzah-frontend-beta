@@ -43,7 +43,7 @@ export default {
       <br />
       Location: {{ feast.location }}
       <br />
-      <img v-for="image in feast.images" v-bind:src="image.url" style="max-width: 85%">
+      <img v-for="image in feast.images" v-bind:src="image.url" style="max-width: 100%">
       <br />
       <hr />
     </div>
