@@ -4,7 +4,7 @@ import axios from 'axios';
 export default {
   data: function () {
     return {
-      message: "Welcome to the Feasts Page!",
+      message: "Huzzah! Enjoy the Finest Feasts the Kingdom has to Offer!",
       feasts: []
       // searchTerm: ""
     };
@@ -33,8 +33,9 @@ export default {
 </script>
 
 <template>
+
   <div class="feasts">
-    <h1>{{ message }}</h1>
+    <h1><strong>{{ message }}</strong></h1>
     <!-- Search: <input type="text" v-model="lowerSearchTerm"> -->
     <div v-for="feast in feasts" v-bind:key="feast.id">
       <h2>{{ feast.name }}</h2>

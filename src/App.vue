@@ -1,9 +1,9 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/events">Events</router-link> |
-    <router-link to="/feasts">Feasts</router-link> |
-    <router-link to="/vendors">Marketplace Vendors</router-link>
+    <router-link to="/"></router-link>
+    <router-link to="/events"></router-link>
+    <router-link to="/feasts"></router-link>
+    <router-link to="/vendors"></router-link>
   </nav>
   <router-view />
 </template>
@@ -19,7 +19,7 @@
 }
 
 nav {
-  padding: 30px;
+  padding: 5px;
 }
 
 nav a {

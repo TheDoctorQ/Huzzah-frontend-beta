@@ -4,7 +4,7 @@ import axios from 'axios';
 export default {
   data: function () {
     return {
-      message: "Welcome to the Vendors Page!",
+      message: "Exotic Wares From Lands Near & Far!",
       vendors: []
       // searchTerm: ""
     };
@@ -33,7 +33,7 @@ export default {
 </script>
 <template>
   <div class="vendors">
-    <h1>{{ message }}</h1>
+    <h1><strong>{{ message }}</strong></h1>
     <!-- Search: <input type="text" v-model="lowerSearchTerm"> -->
     <div v-for="vendor in vendors" v-bind:key="vendor.id">
       <h2>{{ vendor.name }}</h2>

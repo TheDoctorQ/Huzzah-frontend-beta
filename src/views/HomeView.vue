@@ -8,6 +8,7 @@ export default {
     return {
       message1: "Huzzah!!!",
       message2: "Welcome to the Colorado Renaissance Festival App!",
+      message3: "Hover over highlighted points on the map below to see what fun there is to be had!"
     };
   },
   created: function () { },
@@ -1541,8 +1542,10 @@ directions.on('route', function (e) {
 
 <template>
   <div class="home">
-    <h1>{{ message1 }}</h1>
+    <h1><strong>{{ message1 }}</strong></h1>
     <h2>{{ message2 }}</h2>
+    <br />
+    <h4>{{ message3 }}</h4>
   </div>
 </template>
 

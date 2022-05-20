@@ -5,7 +5,7 @@ import axios from 'axios';
 export default {
   data: function () {
     return {
-      message: "Welcome to the Events Page!",
+      message: "Dazzling Daring Excitement for All Ages!",
       events: []
       // searchTerm: ""
     };
@@ -36,19 +36,24 @@ export default {
 
 <template>
   <div class="events">
-    <h1>{{ message }}</h1>
+    <h1><strong>{{ message }}</strong></h1>
     <!-- Search: <input type="text" v-model="lowerSearchTerm"> -->
     <div v-for="event in events" v-bind:key="event.id">
       <h2>{{ event.title }}</h2>
+      {{ event.description }}
+      <br />
       {{ event.time }}
       <br />
-      <a href="mapbox://"> {{ event.location }} </a><br />
+      <br />
+      {{ event.location }}
+      <br />
       <img v-for=" image in event.images" v-bind:src="image.url" style="max-width: 100%">
       <br />
       <hr />
     </div>
   </div>
 </template>
+
 
 <style>
 /* css selector */
